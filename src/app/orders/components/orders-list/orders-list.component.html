@@ -1,0 +1,32 @@
+<div *ngIf="ordini; else zeroordini">
+    <p>Ordini totali: {{ordini.length}} </p>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Fornitore</th>
+                <th>Prezzo</th>
+                <th>Data Acquisto</th>
+                <th>Data Consegna</th>
+                <th>Immagine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ordine of ordini">
+                <td>{{ordine.id}}</td>
+                <td>{{ordine.name | uppercase}}</td>
+                <td>{{ordine.supplier | uppercase}}</td>
+                <td>{{ordine.price | currency: 'EUR'}}</td>
+                <td>{{ordine.purchaseDate | date: 'dd/MM/yyyy'}}</td>
+                <td>{{ordine.deliveryDate | date: 'dd/MM/yyyy'}}</td>
+                <td><img src="{{ordine.image}}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #zeroordini>
+    <h3>Non è stato ancora effettuato un ordine</h3>
+</ng-template>
