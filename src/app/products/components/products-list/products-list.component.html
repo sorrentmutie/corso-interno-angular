@@ -1,0 +1,31 @@
+
+<div *ngIf="prodotti; else zeroprodotti">
+  <p>Numero prodotti disponibili: {{prodotti.length}} </p>
+
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Prezzo</th>
+            <th>Data</th>
+            <th>Descrizione</th>
+            <th>Immagine</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prodotto of prodotti">
+          <td>{{prodotto.id}}</td>
+          <td>{{prodotto.name  |  first | uppercase}}</td>
+          <td>{{prodotto.price | currency: 'EUR'}}</td>
+          <td>{{prodotto.releaseDate | date: 'dd/MM/yyyy'}}</td>
+          <td>{{prodotto | second}}</td>
+          <td><img src="{{prodotto.image}}"></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #zeroprodotti>
+  <h3>Non ci sono prodotti disponibili</h3>
+</ng-template>
