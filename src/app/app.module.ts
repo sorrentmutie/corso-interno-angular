@@ -7,6 +7,8 @@ import { ProductsPageComponent } from './products/pages/products-page/products-p
 import { ProductsListComponent } from './products/components/products-list/products-list.component';
 import { FirstPipe } from './products/pipes/first.pipe';
 import { SecondPipe } from './products/pipes/second.pipe';
+import { OrdersListComponent } from './orders/components/orders-list/orders-list.component';
+import { OrdersPageComponent } from './orders/pages/orders-page/orders-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SecondPipe } from './products/pipes/second.pipe';
     ProductsPageComponent,
     ProductsListComponent,
     FirstPipe,
-    SecondPipe
+    SecondPipe,
+    OrdersListComponent,
+    OrdersPageComponent
   ],
   imports: [
     BrowserModule,
