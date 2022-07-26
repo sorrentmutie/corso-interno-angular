@@ -1,0 +1,7 @@
+<section>
+  <button (click)="downloadFile()" class="btn btn-success"> Download</button>
+  <!-- <article [ngClass]="{'downloading': downloadStatus === 1, 'downloaded': downloadStatus === 2}">OK</article> -->
+   <!-- <article class="download" [ngClass]="downloadStatus === 1 ? 'downloading' : 'downloaded' ">OK</article> -->
+   <article class="download" [ngClass]="downloadStatus==1?'downloading' : downloadStatus==2 ? 'downloaded' : '' "> ok </article>
+
+</section>

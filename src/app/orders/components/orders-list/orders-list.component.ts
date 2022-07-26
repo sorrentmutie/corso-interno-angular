@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Order } from '../../models/order';
 
 @Component({
@@ -8,5 +8,11 @@ import { Order } from '../../models/order';
 })
 export class OrdersListComponent {
   @Input() ordini: Order[] | undefined = undefined;
+  @Output() emitEvent: EventEmitter<Order> = new EventEmitter();
+
+  showDetails(selectedOrder: Order) {
+    this.emitEvent.emit(selectedOrder);
+  }
+
 
 }

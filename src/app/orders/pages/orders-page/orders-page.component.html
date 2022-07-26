@@ -1,8 +1,13 @@
 <h2>Pagina degli ordini</h2>
 
 <h3> Lista degli ordini in consegna</h3>
-<app-orders-list [ordini]="ordiniInConsegna"></app-orders-list>
+<div *ngIf="ordineSelezionato == undefined; else selectedOrder">
+    <app-orders-list  (emitEvent)="dettaglioInConsegna($event)" [ordini]="ordiniInConsegna"></app-orders-list>
+</div>
+<ng-template #selectedOrder>
+    <app-order-details (emitEvent)="mostraTabella($event)"  [ordine]="ordineSelezionato"></app-order-details>
+</ng-template>
 <br />
 <h3> Lista degli ordini da ritirare</h3>
-<app-orders-list [ordini]="ordiniDaRitirare"></app-orders-list>
+<app-orders-list (emitEvent)="dettaglioDaRitirare($event)" [ordini]="ordiniDaRitirare"></app-orders-list>
 

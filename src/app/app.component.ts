@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-demo';
+  dato: string = "Valore Iniziale";
+  dato2 = 1;
+  change(){
+    this.dato = 'Valore sambiato';
+    this.dato2 = 42;
+  }
 }

@@ -10,8 +10,9 @@ export class OrdersPageComponent {
 
   ordiniInConsegna: Order[] = [];
   ordiniDaRitirare: Order[] = [];
-  
-  constructor() { 
+  ordineSelezionato: Order | undefined = undefined;
+
+  constructor() {
     this.ordiniInConsegna = this.estraiOrdiniInConsegna();
     this.ordiniDaRitirare = this.estraiOrdiniDaRitirare();
   }
@@ -38,7 +39,7 @@ export class OrdersPageComponent {
         deliveryDate: new Date(),
         image: "https://th.bing.com/th/id/OIP.qEZnrWcytrn3GH4phNhzcAHaHa?pid=ImgDet&rs=1"
       }
-      
+
     ]
   }
 
@@ -65,6 +66,18 @@ export class OrdersPageComponent {
         image: "https://th.bing.com/th/id/OIP.qEZnrWcytrn3GH4phNhzcAHaHa?pid=ImgDet&rs=1"
       }
     ]
+  }
+
+  dettaglioInConsegna(payload: Order): void {
+     this.ordineSelezionato = payload;
+  }
+
+  dettaglioDaRitirare(payload: Order) : void {
+    alert(payload.name);
+  }
+
+  mostraTabella(payload: boolean) {
+    this.ordineSelezionato = undefined;
   }
 
 }

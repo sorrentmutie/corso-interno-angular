@@ -1,0 +1,24 @@
+section {
+  display: flex;
+}
+
+.download {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  color: black;
+}
+
+.downloading {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+
+.downloaded {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  color: white;
+}

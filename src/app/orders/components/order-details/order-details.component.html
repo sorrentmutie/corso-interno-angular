@@ -1,0 +1,6 @@
+<p>order-details works!</p>
+<article *ngIf="ordine">
+  <p>{{ordine.name}}</p>
+  <input [(ngModel)]="ordine.name" class="form-control">
+  <button (click)="goBack()" class="btn btn-info">Torna Indietro</button>
+</article>
