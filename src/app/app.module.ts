@@ -13,6 +13,7 @@ import { OrdersPageComponent } from './orders/pages/orders-page/orders-page.comp
 import { SharedFirstComponent } from './shared/components/shared-first/shared-first.component';
 import { OrderDetailsComponent } from './orders/components/order-details/order-details.component';
 import { SharedSecondComponent } from './shared/components/shared-second/shared-second.component';
+import { ProductsService } from './products/services/products.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { SharedSecondComponent } from './shared/components/shared-second/shared-
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
