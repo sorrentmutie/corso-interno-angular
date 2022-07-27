@@ -13,6 +13,8 @@ import { OrdersPageComponent } from './orders/pages/orders-page/orders-page.comp
 import { SharedFirstComponent } from './shared/components/shared-first/shared-first.component';
 import { OrderDetailsComponent } from './orders/components/order-details/order-details.component';
 import { SharedSecondComponent } from './shared/components/shared-second/shared-second.component';
+import { ProductsDetailsComponent } from './products/components/products-details/products-details.component';
+import { SharedThirdComponent } from './shared/components/shared-third/shared-third.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SharedSecondComponent } from './shared/components/shared-second/shared-
     OrdersPageComponent,
     SharedFirstComponent,
     OrderDetailsComponent,
-    SharedSecondComponent
+    SharedSecondComponent,
+    ProductsDetailsComponent,
+    SharedThirdComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,6 @@
-<p>shared-second works!</p>
+<p>shared-second start</p>
 {{valore}}
-<div *ngIf="dato">{{dato}}</div>
+<div *ngIf="dato">{{dato}} (shared-second) </div>
+
+<app-shared-third [terzoDato]="dato" ></app-shared-third>
+<p>shared-second end</p>

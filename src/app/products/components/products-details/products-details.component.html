@@ -1,0 +1,6 @@
+<p>products-details works!</p>
+<article *ngIf="prodotto">
+    <p>{{prodotto.name}}</p>
+    <input [(ngModel)]="prodotto.name" class="form-control">
+    <button (click)="goBack()" class="btn btn-info">Torna Indietro</button>
+</article>

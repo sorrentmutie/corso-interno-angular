@@ -1,7 +1,15 @@
 <h2>Pagina dei prodotti</h2>
 
 <h3> Lista dei prodotti in offerta</h3>
-<app-products-list [prodotti]="prodottiInOfferta"></app-products-list>
-<br/>
+<div *ngIf="prodottoSelezionato == undefined; else selectedProductOffer">
+    <app-products-list (emitEvent)="dettaglioInOfferta($event)"  [prodotti]="prodottiInOfferta"></app-products-list>
+</div>
+<ng-template #selectedProductOffer>
+    <app-products-details (emitEvent)="mostraTabella($event)" [prodotto]="prodottoSelezionato"></app-products-details>
+</ng-template>
+<br />
+
+
 <h3> Lista dei prodotti da riordinare</h3>
 <app-products-list [prodotti]="prodottiDaRiordinare"></app-products-list>
+

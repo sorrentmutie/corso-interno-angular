@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../models/product';
 
 @Component({
@@ -7,5 +7,10 @@ import { Product } from '../../models/product';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent  {
-  @Input() prodotti : Product[] | undefined = undefined;
+  @Input() prodotti: Product[] | undefined = undefined;
+  @Output() emitEvent: EventEmitter<Product> = new EventEmitter();
+
+  showDetails(selectedProduct: Product) {
+    this.emitEvent.emit(selectedProduct);
+  }
 }

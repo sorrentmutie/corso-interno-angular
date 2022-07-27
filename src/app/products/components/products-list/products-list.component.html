@@ -11,20 +11,24 @@
             <th>Data</th>
             <th>Descrizione</th>
             <th>Immagine</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let prodotto of prodotti">
           <td>{{prodotto.id}}</td>
           <td>{{prodotto.name  |  first | uppercase}}</td>
-          <td>{{prodotto.price | currency: 'EUR'}}</td>
+          <td [ngClass]="prodotto.price<1500 ? 'cheap' : 'pricey' ">{{prodotto.price | currency: 'EUR'}}</td>
           <td>{{prodotto.releaseDate | date: 'dd/MM/yyyy'}}</td>
           <td>{{prodotto | second}}</td>
           <td><img src="{{prodotto.image}}"></td>
+          <td><button (click)="showDetails(prodotto)" class="btn btn-success">Dettagli</button></td>
         </tr>
     </tbody>
   </table>
 </div>
+
+
 
 <ng-template #zeroprodotti>
   <h3>Non ci sono prodotti disponibili</h3>

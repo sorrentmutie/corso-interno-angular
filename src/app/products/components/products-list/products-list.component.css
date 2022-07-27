@@ -3,3 +3,11 @@ img {
   margin: auto;
   width: 50px;
 }
+
+.cheap {
+  background-color:green;
+}
+
+.pricey {
+  background-color:red;
+}

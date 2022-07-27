@@ -10,6 +10,7 @@ export class ProductsPageComponent  {
 
   prodottiInOfferta: Product[] = [];
   prodottiDaRiordinare: Product[] = [];
+  prodottoSelezionato: Product | undefined = undefined;
 
   constructor() {
       this.prodottiInOfferta = this.estraiProdottiInOfferta();
@@ -59,5 +60,16 @@ export class ProductsPageComponent  {
 
   }
 
+  dettaglioInOfferta(payload: Product): void {
+    this.prodottoSelezionato = payload;
+  }
+
+  dettaglioDaRiordinare(payload: Product): void {
+    alert(payload.name);
+  }
+
+  mostraTabella(payload: boolean) {
+    this.prodottoSelezionato = undefined;
+  }
 
 }
