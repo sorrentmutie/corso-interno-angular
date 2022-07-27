@@ -3,4 +3,5 @@
     <p>{{prodotto.name}}</p>
     <input [(ngModel)]="prodotto.name" class="form-control">
     <button (click)="goBack()" class="btn btn-info">Torna Indietro</button>
+    <app-shared-third [terzoDato]="prodotto" [productName]="prodotto.name"></app-shared-third>
 </article>

@@ -75,4 +75,8 @@ export class ProductsPageComponent  {
     this.prodottoSelezionato = undefined;
   }
 
+  aggiungiProdotto(): void {
+
+    this.prodottiInOfferta.push({ id: 6, name: "prodotto aggiunto", price: 300, code: 999, description: "Prodotto aggiunto", releaseDate: new Date(), image: "https://th.bing.com/th/id/OIP.qEZnrWcytrn3GH4phNhzcAHaHa?pid=ImgDet&rs=1" })
+  }
 }
