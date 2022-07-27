@@ -60,6 +60,9 @@ export class ProductsPageComponent  {
 
   }
 
+
+
+
   dettaglioInOfferta(payload: Product): void {
     this.prodottoSelezionato = payload;
   }

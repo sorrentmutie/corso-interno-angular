@@ -10,10 +10,15 @@ export class SharedThirdComponent implements OnInit {
   @Input() terzoDato: string | undefined = undefined;
 
   constructor() { 
-   
+    /*
+    while(1<2) {
+    console.log("sleep");
+    }
+    */
   }
 
   ngOnInit(): void {
   }
+
 
 }
