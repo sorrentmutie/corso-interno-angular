@@ -1,0 +1,16 @@
+<p>randomusers-page works!</p>
+
+<section *ngIf="users">
+
+  <article *ngFor="let user of users" class="mb-5">
+    <div class="card">
+      <img class="card-img-top mt-5" src="{{user.picture.large}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{user.name.first}} {{user.name.last}}</h5>
+        <p class="card-text"> {{user.location.city}} </p>
+        <hr/>
+      </div>
+    </div>
+  </article>
+
+</section>

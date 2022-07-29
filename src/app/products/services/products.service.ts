@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { delay} from 'rxjs/operators';
 import { Product } from '../models/product';
 
 @Injectable({
@@ -59,4 +61,14 @@ export class ProductsService {
     ];
 
   }
+
+  estraiProdottiInOffertaAsObservable() : Observable<Product[]>{
+      return of(this.estraiProdottiInOfferta()).pipe(delay(5000));
+  }
+
+  estraiProdottiDaRiordinareAsObservable() : Observable<Product[]>{
+    return of(this.estraiProdottiDaRiordinare());
+}
+
+
 }

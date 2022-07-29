@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { SharedFirstComponent } from './shared/components/shared-first/shared-fi
 import { OrderDetailsComponent } from './orders/components/order-details/order-details.component';
 import { SharedSecondComponent } from './shared/components/shared-second/shared-second.component';
 import { ProductsService } from './products/services/products.service';
+import { RxjsComponent } from './shared/components/rxjs/rxjs.component';
+import { RandomusersPageComponent } from './randomusers/components/randomusers-page/randomusers-page.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { ProductsService } from './products/services/products.service';
     OrdersPageComponent,
     SharedFirstComponent,
     OrderDetailsComponent,
-    SharedSecondComponent
+    SharedSecondComponent,
+    RxjsComponent,
+    RandomusersPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
